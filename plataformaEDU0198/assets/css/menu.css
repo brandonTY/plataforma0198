@@ -1,0 +1,40 @@
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.menufijo {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  /* truco para que el menú de navegación se quede fijo en pantalla consiste en aplicarle una propiedad llamada position:fixed*/
+  position: fixed;
+  /*vamos a decirle que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla */
+  z-index: 100;
+}
+
+.menufijo nav {
+  float: left; /* Desplazamos el nav hacia la izquierda */
+}
+ 
+.menufijo nav ul {
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+}
+ 
+.menufijo nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+ 
+.menufijo nav ul li a {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+ 
+.menufijo nav ul li:hover {
+  background:  #5dade2 ;
+}
